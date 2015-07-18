@@ -323,10 +323,22 @@ plot(avg_steps$Group.1, avg_steps$x, type = &quot;l&quot;, xlab = &quot;Interval
 
 <pre><code class="r">get.rows   &lt;- (avg_steps$x == max(avg_steps$x))
 max_avg_steps &lt;- avg_steps[get.rows,]
-cat (&quot;The median of total number of steps taken per day is equal to &quot;, max_avg_steps$x)
+cat (&quot;The 5-minute interval that contains the maximum number of steps is&quot;, max_avg_steps$Group.1)
 </code></pre>
 
-<pre><code>## The median of total number of steps taken per day is equal to  206.1698
+<pre><code>## The 5-minute interval that contains the maximum number of steps is 835
+</code></pre>
+
+<pre><code class="r">cat (&quot;The number of steps taken during that duration is&quot;, max_avg_steps$x)
+</code></pre>
+
+<pre><code>## The number of steps taken during that duration is 206.1698
+</code></pre>
+
+<pre><code class="r">cat (&quot;The time at that instant is&quot;, max_avg_steps$Group.1/100 )
+</code></pre>
+
+<pre><code>## The time at that instant is 8.35
 </code></pre>
 
 <h2>Imputing missing values</h2>

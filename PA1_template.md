@@ -141,11 +141,27 @@ plot(avg_steps$Group.1, avg_steps$x, type = "l", xlab = "Interval", ylab = "Freq
 ```r
 get.rows   <- (avg_steps$x == max(avg_steps$x))
 max_avg_steps <- avg_steps[get.rows,]
-cat ("The median of total number of steps taken per day is equal to ", max_avg_steps$x)
+cat ("The 5-minute interval that contains the maximum number of steps is", max_avg_steps$Group.1)
 ```
 
 ```
-## The median of total number of steps taken per day is equal to  206.1698
+## The 5-minute interval that contains the maximum number of steps is 835
+```
+
+```r
+cat ("The number of steps taken during that duration is", max_avg_steps$x)
+```
+
+```
+## The number of steps taken during that duration is 206.1698
+```
+
+```r
+cat ("The time at that instant is", max_avg_steps$Group.1/100 )
+```
+
+```
+## The time at that instant is 8.35
 ```
 
 ## Imputing missing values
